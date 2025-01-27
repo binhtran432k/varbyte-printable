@@ -1,0 +1,12 @@
+{
+	"name": "varbyte-printable",
+	"module": "index.ts",
+	"type": "module",
+	"scripts": {
+		"lint": "biome check",
+		"lint:fix": "biome check --unsafe --write"
+	},
+	"devDependencies": {
+		"@types/bun": "latest"
+	}
+}
