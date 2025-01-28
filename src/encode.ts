@@ -4,7 +4,7 @@ export enum Encode {
 	Start = 32, // ' '
 	Gap1 = 34, // '"'
 	Gap2 = 92, // '\\'
-	Base = 46, // '.' (126 - 32 - 2) / 2
+	Base = 46, // (126 - 32 - 2) / 2
 }
 
 export interface NumberArrayLike {
