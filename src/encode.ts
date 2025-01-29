@@ -28,11 +28,11 @@ function encodeNumber(value: number): string {
 		const low = walkValue % Encode.Base;
 		const rest = walkValue - low;
 		result = digitToChar(low + first) + result;
-		if (rest === 0) break;
+		if (rest === 0) {
+			return result;
+		}
 		walkValue = rest / Encode.Base;
 	}
-
-	return result;
 }
 
 function digitToChar(digit: number): string {
