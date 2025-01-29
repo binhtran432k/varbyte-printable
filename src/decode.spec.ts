@@ -19,6 +19,14 @@ describe("decodeVarbytePrintable()", () => {
 		expect(decodeToNumbers("~", 1)).toEqual([0xffff]);
 		expect(decodeToNumbers("?Mp", 1)).toEqual([0xffff + 1]);
 	});
+	test("can skip gaps", () => {
+		expect(decodeToNumbers("[", 1)).toEqual([12]);
+		expect(decodeToNumbers("\\", 1)).not.toEqual([13]);
+		expect(decodeToNumbers("]", 1)).toEqual([13]);
+		expect(decodeToNumbers("!}", 1)).toEqual([91]);
+		expect(decodeToNumbers('"O', 1)).not.toEqual([92]);
+		expect(decodeToNumbers("#O", 1)).toEqual([92]);
+	});
 });
 
 function decodeToNumbers(input: string, size: number) {
