@@ -19,4 +19,12 @@ describe("encodeVarbytePrintable()", () => {
 		expect(encodeVarbytePrintable([0xffff])).toBe("~");
 		expect(encodeVarbytePrintable([0xffff + 1])).toBe("?Mp");
 	});
+	test("can skip gaps", () => {
+		expect(encodeVarbytePrintable([12])).toBe("[");
+		expect(encodeVarbytePrintable([13])).not.toBe("\\");
+		expect(encodeVarbytePrintable([13])).toBe("]");
+		expect(encodeVarbytePrintable([91])).toBe("!}");
+		expect(encodeVarbytePrintable([92])).not.toBe('"O');
+		expect(encodeVarbytePrintable([92])).toBe("#O");
+	});
 });
