@@ -1,9 +1,28 @@
 {
 	"name": "varbyte-printable",
+	"version": "0.2.0",
+	"author": "Binh Tran <binhtran432k@gmail.com>",
+	"repository": {
+		"url": "https://github.com/binhtran432k/varbyte-printable.git",
+		"type": "git"
+	},
+	"description": "A library for encoding variable-length bytes into a compact, printable, and JSON/JavaScript-safe string format.",
+	"keywords": [
+		"encoding",
+		"typescript",
+		"compression",
+		"data-serialization",
+		"binary-to-text",
+		"bun",
+		"oxc"
+	],
+	"license": "MIT",
 	"module": "dist/index.js",
 	"types": "dist/index.d.ts",
+	"files": ["dist"],
 	"type": "module",
 	"scripts": {
+		"prepack": "bun gen",
 		"lint": "biome check",
 		"lint:fix": "biome check --unsafe --write",
 		"gen": "bun scripts/gen.ts"
