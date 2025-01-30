@@ -1,9 +1,9 @@
 # varbyte-printable
 
-![NPM Version](https://img.shields.io/npm/v/varbyte-printable)
-![NPM Bundle Size](https://img.shields.io/bundlephobia/minzip/varbyte-printable)
-![CI Workflow](https://github.com/binhtran432k/varbyte-printable/actions/workflows/ci.yml/badge.svg)
-![GitHub License](https://img.shields.io/github/license/binhtran432k/varbyte-printable)
+[![NPM Version](https://img.shields.io/npm/v/varbyte-printable)](https://www.npmjs.com/package/varbyte-printable)
+[![NPM Bundle Size](https://img.shields.io/bundlephobia/minzip/varbyte-printable)](https://www.npmjs.com/package/varbyte-printable)
+[![CI Workflow](https://github.com/binhtran432k/varbyte-printable/actions/workflows/ci.yml/badge.svg)](https://github.com/binhtran432k/varbyte-printable/actions/workflows/ci.yml)
+[![CD Workflow](https://github.com/binhtran432k/varbyte-printable/actions/workflows/cd.yml/badge.svg)](https://github.com/binhtran432k/varbyte-printable/actions/workflows/cd.yml)
 
 A library for encoding variable-length bytes into a compact, printable, and
 JSON/JavaScript-safe string format.
