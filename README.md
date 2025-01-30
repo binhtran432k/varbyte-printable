@@ -74,9 +74,9 @@ import {
 
 const bytes = new Uint16Array([72, 101, 108, 1080, 111]);
 const encoded = encodeVarbytePrintable(bytes);
-console.log(encoded); // !j#X#`8f#c
+console.log(encoded); // T!j#X#`8f#c
 
-const decoded = decodeVarbytePrintable(encoded, new Uint16Array(5));
+const decoded = decodeVarbytePrintable(Uint16Array, encoded);
 console.log(decoded); // Uint16Array(5) [72, 101, 108, 1080, 111]
 ```
 

@@ -4,11 +4,17 @@ interface DecodeState {
 	pos: number;
 }
 
-export function decodeVarbytePrintable(
+export interface NumberArrayLikeConstructor<T extends NumberArrayLike> {
+	readonly prototype: T;
+	new (length: number): T;
+}
+
+export function decodeVarbytePrintable<T extends NumberArrayLike>(
+	ArrayConstructor: NumberArrayLikeConstructor<T>,
 	input: string,
-	array: NumberArrayLike,
-): NumberArrayLike {
+): T {
 	const state: DecodeState = { pos: 0 };
+	const array = new ArrayConstructor(decodeNumber(input, state));
 	let arrI = 0;
 	while (state.pos < input.length) {
 		array[arrI++] = decodeNumber(input, state);

@@ -13,7 +13,7 @@ export interface NumberArrayLike {
 }
 
 export function encodeVarbytePrintable(values: NumberArrayLike): string {
-	let result = "";
+	let result = encodeNumber(values.length);
 	for (let i = 0; i < values.length; i++) result += encodeNumber(values[i]);
 	return result;
 }
